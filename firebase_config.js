@@ -1,17 +1,22 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
-import { getDatabase, ref, push, set, get, child } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAVFxlp7aXIuIKiq9ySeyE4d6R-a4WLVGc",
-  authDomain: "mr-abanob-exams.firebaseapp.com",
-  databaseURL: "https://mr-abanob-exams-default-rtdb.firebaseio.com",
-  projectId: "mr-abanob-exams",
-  storageBucket: "mr-abanob-exams.firebasestorage.app",
-  messagingSenderId: "295662640771",
-  appId: "1:295662640771:web:115931a29a8a1032c545b6",
-  measurementId: "G-9KEQ1YL5NX"
+  apiKey: "AIzaSyB0buA6cBJauJCGPoJIoQq93QvCNxip5ds",
+  authDomain: "prep3-arabic.firebaseapp.com",
+  databaseURL: "https://prep3-arabic-default-rtdb.firebaseio.com",
+  projectId: "prep3-arabic",
+  storageBucket: "prep3-arabic.firebasestorage.app",
+  messagingSenderId: "1015444377566",
+  appId: "1:1015444377566:web:3ec211c08df32384b5574f",
+  measurementId: "G-8W1H5KR6MM"
 };
 
-export const app = initializeApp(firebaseConfig);
-export const db = getDatabase(app);
-export { ref, push, set, get, child };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
